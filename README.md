@@ -2,7 +2,7 @@
 # Conceito
 
 ### Abstração
-Pegar um problema real do cliente e tornar ele em um sistema para suprir a necessidade proposta
+Pegar um problema real do cliente e transformá-lo em um sistema para suprir a necessidade proposta.
 
 ### Ocultamento de informações
 Consiste em esconder os detalhes internos da implementação, permitindo que o recurso seja usado sem que seja necessário conhecer seu funcionamento interno. Esse conceito está diretamente relacionado ao encapsulamento.
