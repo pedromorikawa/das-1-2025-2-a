@@ -19,4 +19,17 @@ Quando Classe A e B dependem uma da outra, se mexer em um pedaço do código ele
 ## UML
 - __Herança (SETA VAZADA):__ Uma classe herda de outra. Ex: "Cachorro é um Animal".
 - __Associação (SETA FECHADA):__ Uma classe se relaciona com outra. Ex: "Professor ensina Aluno".
-- __Implementação (SETA PONTILHADA):__ Uma classe implementa uma interface. Ex: "Carro implementa Veículo".
+- __Implementação (SETA PONTILHADA e vazada):__ Uma classe implementa uma interface. Ex: "Carro implementa Veículo".
+
+Model -> Dados
+View -> Html
+Controler -> Controlador
+
+## Solid
+Utilizar a orientação objetos do jeito mais correto possivel.
+
+- __Single Responsibility Principle ->__ está diretamente ligado a coesão e sobre ter uma responsabilidade unica para separar uma apresentação de regra de negócio
+- __Open/Closed Principle ->__ segregação de interfaces, ter uma interface especifica para cada coisa.
+- __Liskov Substitution Principle ->__
+- __Interface Segregation Principle ->__ 
+- __Dependency Inversion Principle ->__
