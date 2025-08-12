@@ -30,7 +30,7 @@ Aplicar principios de orientação a objetos de forma mais correta e consistente
 
 - __Single Responsibility Principle ->__ Cada classe deve ter apenas uma responsabilidade, aumentando a coesão e evitando misturar funções como apresentação e regra de negócio.
 - __Open/Closed Principle ->__ uma classe deve estar fechada para modificações e aberta para extensões.
-- __Liskov Substitution Principle ->__ 
+- __Liskov Substitution Principle ->__ O Princípio de Substituição de Liskov explicita regras para redefinição de métodos de classes base em classes filhas.
 - __Interface Segregation Principle ->__ segregação de interfaces, criar interfaces especificas e coesas, evitando interfaces genéricas que obriguem a implementação de métodos desnecessários.
 - __Dependency Inversion Principle ->__ Uma classe deve depender diretamente de uma abstração e não de uma implementação concreta, evita que uma classe converse com a outra
 
