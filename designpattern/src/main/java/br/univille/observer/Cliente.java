@@ -6,15 +6,14 @@ public class Cliente {
 
         var zezinho = new ConcreteSubscriber();
         var huguinho = new ConcreteSubscriber();
-        var tia - new ConcreteSubscriber();
+        var tia = new ConcreteSubscriber();
 
         grupoFamilia.subscribe(zezinho);
         grupoFamilia.subscribe(huguinho);
         grupoFamilia.subscribe(tia);
 
-        grupoFamilia.SetMainState("BOM DIAAA")
+        grupoFamilia.setMainState("BOM DIAAA ❤️❤️❤️");
         grupoFamilia.notifySubscribers();
-
-
+        
     }
 }
