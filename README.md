@@ -45,3 +45,28 @@ Principio do menor conhecimento, quando um método que esta sendo utilizado cham
 - de atributos da classe do método (caso 4)
 
 ELE TENTA ELIMINAR ESTRATÉGIAS GLOBAIS, BASTA UTILIZAR O QUE TEM DISPONIVEL PARA MIM (LOCAL)
+
+# Caracteristicas da arquitetura = Requisitos não funcionais
+
+- Impossivel que um sistema cumpra todos os itens das caracteristicas arquiteturais
+- Decisão arquitetural é quando escolho a arquitetura que vou usar
+
+- Tomar decisões de arquitetura -> é a pessoa que vai definir como o processo vai seguir, qual ferramenta utilizar e etc.
+- Analisar continuamente a arquitetura -> analisar constantemente se a forma que esta programando antes está sendo eficiente fazendo com que 
+- manter - se atualizado com as ultimas tendências
+  
+- Assegurar a conformidade com as decisões -> assegurar que os papeis estão sendo seguidos, através de uma analise statica de código, (ferramentas que varrem o código fonte na intenção de buscar e encontrar os problemas), levando em consideração que não temos como acompanhar de forma prática tudo que o programador está fazendo.
+  
+- Exposição e experiencia -> Um arquiteto é contratado para analisar o sistema, ele deve ter muita experiencias em diversas áreas para que ele consiga resolver o problema e principalmente ele deve saber sobre o produto que ele estará trabalhando, precisa saber conversar com o cliente sobre a regra de negócio e precisa saber lidar com seres humanos, praticamente um lider.  
+- Exposição e experiência diversificadas
+- Ter conhecimento sobre o domínio do negócio
+- Ter habilidades interpessoais
+- Entender e lidar bem com questões políticas -> Precisa saber como negociar positivament.
+
+
+# DevOps
+
+- o que é -> é uma medodologia que de alguma maneira entrega valor (Funcionalidades) para o meu cliente da forma mais rápida.
+- DevOps como cultura -> todos precisam trabalhar juntos para manter um sistema funcionando
+- Equipe DevOps -> quando nem todos os devs tem o conhecimento em infra
+- 
