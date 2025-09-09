@@ -78,3 +78,32 @@ ELE TENTA ELIMINAR ESTRATÉGIAS GLOBAIS, BASTA UTILIZAR O QUE TEM DISPONIVEL PAR
 
 
 -Como é a formação do conhecimento de um arquiteto modelo T?
+
+
+# Trade Off
+
+- 1° Arquitetura -> Baseada em tópicos -> tem um unico padrão 1 para muitos (Assim como um pu). basta ele fazer uma cópia da mensagem e todos vão receber do outro lado (Broker de menssageria), como se fosse um grupo de whatsapp.
+- No caso de algum tópico morrer ele não salva a mensagem, diferença do modelo stream, onde conseguimos voltar e resgatar essas informações como forma de backup (partitions ou Sharding), tem um prazo de 24h á 7 dias
+- Tem como protocolos: AMQP, MQTT, WEB SOCKET, REDIS E RABBITMQ 
+- CADA VEZ QUE A PESSOA LANÇA O EVENTO PELO ARQIVO JSON, O TÓPICO TENTA JOGAR A MESMA MENSAGEM PARA TODAS AS PESSOAS AO MESMO TEMPO
+
+  (No trade off não tem certo e errado, o mesmo pode ser ruim como também pode ser bom)
+
+
+# FILA - FIFO
+-ENQUEUE 
+-DEQUEUE
+
+- SENDER E RECIVER
+- MENSAGENS ORGANIZADAS EM ORDEM
+- SERVEM COMO UM BUFFER (OBRIGATÓRIO) - ELA SALVA A MENSAGEM E ENTREGA NA MESMA FORMA QUE RECEBEU
+- POOLING - BUSCA AS MENSAGENS NA FILA
+
+(IMPLEMTENTAÇÃO: RABBIT MQ, AWS SQS, AZURE SERVICEBUS)
+
+---
+desacoplamento do tópico- (quando é incluso um novo elemento, não altera o impacto geral do processo, pois quem está enviando o evento não sabe quem está recebendo)
+---
+A FILA requer uma mudança significativa no sistema ao adicionar a noca funcionalidade, ja na abordagem de tópicos, nenhuma mudança é necessária na infraestrutura existente.
+---
+#Fan-out
