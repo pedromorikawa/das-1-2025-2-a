@@ -69,15 +69,17 @@ ELE TENTA ELIMINAR ESTRATÉGIAS GLOBAIS, BASTA UTILIZAR O QUE TEM DISPONIVEL PAR
 - o que é -> é uma medodologia que de alguma maneira entrega valor (Funcionalidades) para o meu cliente da forma mais rápida.
 - DevOps como cultura -> todos precisam trabalhar juntos para manter um sistema funcionando
 - Equipe DevOps -> quando nem todos os devs tem o conhecimento em infra
+  
+## Pensamento Arquitetônico
 
-# Pensamento Arquitetônico
+- **Arquitetura vs Design:**  
+  - *Arquitetura:* o arquiteto analisa os requisitos de negócio, define as características do sistema, escolhe padrões e estilos adequados e cria os componentes principais.  
+  - *Design:* o desenvolvimento foca na implementação, criando diagramas de classes para cada componente, telas de interface do usuário e desenvolvendo/testando o código-fonte.  
 
--Resuma a diferença entre: Arquitetura e Design= um arquiteto é responsável por coisas como analisar os requisitos comerciais para extrair e definir as características da arquitetura, selecionar quais padrões e estilos da arquitetura se encaixariam no domínio do problema e criar componentes.
+- **Arquiteto modelo em T:**  
+  Um arquiteto em T possui **conhecimento amplo em várias áreas** da tecnologia e **profundo em uma especialidade**.  
+  Esse perfil permite ter visão sistêmica do projeto, sem perder a capacidade de atuar detalhadamente em uma área específica.
 
-- desenvolvimento, é responsável por criar diagramas de classes para cada componente, criar telas de interface do usuário e desenvolver e testar o código-fonte.
-
-
--Como é a formação do conhecimento de um arquiteto modelo T?
 
 
 # Trade Off
