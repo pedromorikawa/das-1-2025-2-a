@@ -1,111 +1,161 @@
 # das-1-2025-2-a
-# Conceito
+
+## Conceitos
 
 ### Abstração
-Pegar um problema real do cliente e transformá-lo em um sistema para suprir a necessidade proposta.
+É o processo de **pegar um problema real** e transformá-lo em uma solução dentro do sistema.  
+Com a abstração, conseguimos focar apenas no que é essencial para o cliente, sem se preocupar com todos os detalhes do mundo real.  
 
-### Ocultamento de informações
-Consiste em esconder os detalhes internos da implementação, permitindo que o recurso seja usado sem que seja necessário conhecer seu funcionamento interno. Esse conceito está diretamente relacionado ao encapsulamento.
+---
 
-### Débito Tecnico
-Débito técnico são partes do código que foram mal implementadas e que, futuramente, podem causar problemas no sistema.
+### Ocultamento de Informações
+Consiste em **esconder os detalhes internos da implementação**, deixando disponível apenas o que é necessário para uso.  
+O usuário ou outro sistema consegue utilizar a funcionalidade sem precisar saber como ela foi construída.  
+
+Esse conceito está ligado ao **encapsulamento**, que organiza e protege o código.
+
+---
+
+### Débito Técnico
+É quando escolhemos um caminho mais rápido e fácil na programação, mas que gera problemas no futuro.  
+Pode ser causado por prazos curtos, falta de conhecimento ou má implementação.  
+
+Consequências: mais erros, manutenções difíceis e necessidade de reescrever trechos do sistema.  
+---
 
 ### Coesão
-Codigo que faz uma coisa bem feita, Facilita na implementação, tem apenas conexão com os dados é facil de entender e fazer manutenção, é mais simples de testar isso torna o código coeso.
+Significa que um código ou classe deve **fazer apenas uma coisa bem feita**.  
+Quanto maior a coesão, mais simples será entender, testar e dar manutenção.  
+---
 
 ### Acoplamento
-Quando Classe A e B dependem uma da outra, se mexer em um pedaço do código ele da problema em outro.
+É o grau de **dependência entre duas classes ou módulos**.  
+Se estão muito acoplados, mudar um pode causar problemas no outro.  
 
-## UML
-- __Herança (SETA VAZADA):__ Uma classe herda de outra. Ex: "Cachorro é um Animal".
-- __Associação (SETA FECHADA):__ Uma classe se relaciona com outra. Ex: "Professor ensina Aluno".
-- __Implementação (SETA PONTILHADA e vazada):__ Uma classe implementa uma interface. Ex: "Carro implementa Veículo".
+- Alto acoplamento: Classe A depende diretamente do código interno da Classe B.  
+- Baixo acoplamento: Classe A usa apenas uma interface para se comunicar com a Classe B.  
 
-Model -> Dados.
-View -> Html.
-Controler -> Controlador.
+Quanto menor o acoplamento, mais fácil é dar manutenção e evoluir o sistema.
 
-## Solid
-Aplicar principios de orientação a objetos de forma mais correta e consistente possivel, garantindo um código mais organizado, flexivel e fácil de manter.
+---
 
-- __Single Responsibility Principle ->__ Cada classe deve ter apenas uma responsabilidade, aumentando a coesão e evitando misturar funções como apresentação e regra de negócio.
-- __Open/Closed Principle ->__ uma classe deve estar fechada para modificações e aberta para extensões.
-- __Liskov Substitution Principle ->__ O Princípio de Substituição de Liskov explicita regras para redefinição de métodos de classes base em classes filhas.
-- __Interface Segregation Principle ->__ segregação de interfaces, criar interfaces especificas e coesas, evitando interfaces genéricas que obriguem a implementação de métodos desnecessários.
-- __Dependency Inversion Principle ->__ Uma classe deve depender diretamente de uma abstração e não de uma implementação concreta, evita que uma classe converse com a outra
+## UML (Diagramas)
 
-quando se tem uma herança a classe filho herda tudo do pai, é usado mais composição do que uma herança pois a herança tende a introduzir problemas na manutenção e evolução das classes de um sistema. Esses problemas têm sua origem no forte acoplamento que existe entre subclasses e superclasses
+A UML (Unified Modeling Language) é usada para representar graficamente sistemas.  
+Ajuda a visualizar como classes e objetos se relacionam.
 
-## Principio demeter
+- **Herança (seta vazada):** uma classe herda características de outra.   
+- **Associação (seta cheia):** uma classe se relaciona com outra.  
+- **Implementação (seta pontilhada e vazada):** uma classe implementa uma interface.  
 
-Principio do menor conhecimento, quando um método que esta sendo utilizado chama outros, mas:
-- de sua própria classe (caso 1)
-- de objetos passados como parâmetros (caso 2)
-- de objetos criados pelo próprio método (caso 3)
-- de atributos da classe do método (caso 4)
+**MVC:**  
+- **Model:** gerencia os dados.  
+- **View:** mostra a interface para o usuário.  
+- **Controller:** controla o fluxo e regras do sistema.  
 
-ELE TENTA ELIMINAR ESTRATÉGIAS GLOBAIS, BASTA UTILIZAR O QUE TEM DISPONIVEL PARA MIM (LOCAL)
+---
 
-# Caracteristicas da arquitetura = Requisitos não funcionais
+## SOLID
 
-- Impossivel que um sistema cumpra todos os itens das caracteristicas arquiteturais
-- Decisão arquitetural é quando escolho a arquitetura que vou usar
+Princípios que ajudam a manter o código mais limpo, organizado, flexível e de fácil manutenção.  
+Eles orientam como estruturar classes, interfaces e dependências em um sistema orientado a objetos.
 
-- Tomar decisões de arquitetura -> é a pessoa que vai definir como o processo vai seguir, qual ferramenta utilizar e etc.
-- Analisar continuamente a arquitetura -> analisar constantemente se a forma que esta programando antes está sendo eficiente fazendo com que 
-- manter - se atualizado com as ultimas tendências
+- **S (Single Responsibility Principle):**  
+  Uma classe deve ter apenas um motivo para mudar. Isso significa que ela deve ser responsável por apenas uma parte específica da funcionalidade do sistema.  
+
+- **O (Open/Closed Principle):**  
+  O código deve estar aberto para receber novas funcionalidades sem precisar modificar o que já existe, reduzindo riscos de introduzir erros.  
+
+- **L (Liskov Substitution Principle):**  
+  Objetos de classes derivadas devem poder ser usados no lugar de objetos da classe base, mantendo o comportamento esperado do sistema.  
+
+- **I (Interface Segregation Principle):**  
+  É melhor criar várias interfaces pequenas e específicas do que uma interface grande e genérica, para que classes implementem apenas o que realmente precisam.  
+
+- **D (Dependency Inversion Principle):**  
+  Classes de alto nível não devem depender de classes de baixo nível. Ambas devem depender de abstrações, garantindo menor acoplamento e maior flexibilidade.  
+
+---
+
+## Princípio de Demeter
+Também chamado de **Lei do Menor Conhecimento**.  
+Ele recomenda que uma classe/método conheça apenas o necessário para executar sua função.  
+
+Um método deve usar apenas:  
+- sua própria classe  
+- objetos recebidos como parâmetro  
+- objetos criados dentro do método  
+- atributos da própria classe  
+
+Exemplo ruim: `pedido.getCliente().getEndereco().getCidade()` (muitas chamadas encadeadas).  
+Exemplo bom: `pedido.getCidadeCliente()` (a classe Pedido expõe apenas o que é necessário).
+
+---
+
+## Características da Arquitetura
+
+São requisitos não funcionais que definem qualidade e comportamento do sistema.  
+Exemplo: desempenho, segurança, escalabilidade, manutenção.  
+
+- Nenhum sistema consegue atender a todas as características ao mesmo tempo.  
+- **Decisão arquitetural:** escolher a arquitetura mais adequada para o contexto.  
+
+### Papel do Arquiteto
+- **Tomar decisões:** define como o sistema será desenvolvido e quais ferramentas usar.  
+- **Analisar continuamente:** verifica se as escolhas continuam eficientes.  
+- **Manter-se atualizado:** acompanha tendências e melhores práticas.  
+- **Assegurar conformidade:** garante que as regras arquiteturais sejam seguidas (ex: uso de ferramentas de análise estática).  
+- **Experiência:** precisa conhecer várias áreas, entender o negócio e ter habilidades interpessoais.  
+
+---
+
+## DevOps
+
+- **O que é:** prática que integra desenvolvimento (Dev) e operações (Ops) para entregar valor mais rápido e com qualidade.  
+- **Cultura DevOps:** todos trabalham juntos, não apenas devs ou equipe de infraestrutura.  
+- **Equipe DevOps:** formada quando nem todos têm conhecimento em infraestrutura, exigindo colaboração.
   
-- Assegurar a conformidade com as decisões -> assegurar que os papeis estão sendo seguidos, através de uma analise statica de código, (ferramentas que varrem o código fonte na intenção de buscar e encontrar os problemas), levando em consideração que não temos como acompanhar de forma prática tudo que o programador está fazendo.
-  
-- Exposição e experiencia -> Um arquiteto é contratado para analisar o sistema, ele deve ter muita experiencias em diversas áreas para que ele consiga resolver o problema e principalmente ele deve saber sobre o produto que ele estará trabalhando, precisa saber conversar com o cliente sobre a regra de negócio e precisa saber lidar com seres humanos, praticamente um lider.  
-- Exposição e experiência diversificadas
-- Ter conhecimento sobre o domínio do negócio
-- Ter habilidades interpessoais
-- Entender e lidar bem com questões políticas -> Precisa saber como negociar positivament.
-
-
-# DevOps
-
-- o que é -> é uma medodologia que de alguma maneira entrega valor (Funcionalidades) para o meu cliente da forma mais rápida.
-- DevOps como cultura -> todos precisam trabalhar juntos para manter um sistema funcionando
-- Equipe DevOps -> quando nem todos os devs tem o conhecimento em infra
-  
+---
 ## Pensamento Arquitetônico
 
-- **Arquitetura vs Design:**  
-  - *Arquitetura:* o arquiteto analisa os requisitos de negócio, define as características do sistema, escolhe padrões e estilos adequados e cria os componentes principais.  
-  - *Design:* o desenvolvimento foca na implementação, criando diagramas de classes para cada componente, telas de interface do usuário e desenvolvendo/testando o código-fonte.  
+- **Arquitetura:** foca em requisitos do negócio, padrões e componentes principais.  
+- **Design:** trata da implementação prática do sistema (diagramas, telas e código).  
 
-- **Arquiteto modelo em T:**  
-  Um arquiteto em T possui **conhecimento amplo em várias áreas** da tecnologia e **profundo em uma especialidade**.  
-  Esse perfil permite ter visão sistêmica do projeto, sem perder a capacidade de atuar detalhadamente em uma área específica.
+**Arquiteto em T:**  
+- Conhecimento **amplo em várias áreas**.  
+- Conhecimento **profundo em uma especialidade**.  
+---
 
+## Trade-Off
 
+Toda decisão de arquitetura traz benefícios e desvantagens.  
+Não existe escolha perfeita, mas sim a mais adequada ao cenário.
 
-# Trade Off
-
-- 1° Arquitetura -> Baseada em tópicos -> tem um unico padrão 1 para muitos (Assim como um pu). basta ele fazer uma cópia da mensagem e todos vão receber do outro lado (Broker de menssageria), como se fosse um grupo de whatsapp.
-- No caso de algum tópico morrer ele não salva a mensagem, diferença do modelo stream, onde conseguimos voltar e resgatar essas informações como forma de backup (partitions ou Sharding), tem um prazo de 24h á 7 dias
-- Tem como protocolos: AMQP, MQTT, WEB SOCKET, REDIS E RABBITMQ 
-- CADA VEZ QUE A PESSOA LANÇA O EVENTO PELO ARQIVO JSON, O TÓPICO TENTA JOGAR A MESMA MENSAGEM PARA TODAS AS PESSOAS AO MESMO TEMPO
-
-  (No trade off não tem certo e errado, o mesmo pode ser ruim como também pode ser bom)
-
-
-# FILA - FIFO
--ENQUEUE 
--DEQUEUE
-
-- SENDER E RECIVER
-- MENSAGENS ORGANIZADAS EM ORDEM
-- SERVEM COMO UM BUFFER (OBRIGATÓRIO) - ELA SALVA A MENSAGEM E ENTREGA NA MESMA FORMA QUE RECEBEU
-- POOLING - BUSCA AS MENSAGENS NA FILA
-
-(IMPLEMTENTAÇÃO: RABBIT MQ, AWS SQS, AZURE SERVICEBUS)
+- **Tópicos:** padrão *1 para muitos*. O evento é copiado e enviado a vários interessados.  
+   Exemplo: grupo de WhatsApp, onde uma mensagem chega a todos os membros.  
+- **Stream:** permite recuperar mensagens antigas (backup).  
+- **Protocolos usados:** AMQP, MQTT, WebSocket, Redis, RabbitMQ.  
 
 ---
-desacoplamento do tópico- (quando é incluso um novo elemento, não altera o impacto geral do processo, pois quem está enviando o evento não sabe quem está recebendo)
+
+## Fila (FIFO)
+
+Fila é uma estrutura onde a primeira mensagem a entrar é a primeira a sair (**First In, First Out**).  
+
+- **ENQUEUE:** adicionar mensagem.  
+- **DEQUEUE:** retirar mensagem.  
+- **Sender e Receiver:** quem envia e quem recebe.  
+- **Mensagens em ordem:** sempre entregues na sequência recebida.  
+- **Buffer:** armazena as mensagens até que sejam entregues.  
+- **Pooling:** processo de buscar mensagens na fila.  
+
+Implementações: RabbitMQ, AWS SQS, Azure ServiceBus.
+
 ---
-A FILA requer uma mudança significativa no sistema ao adicionar a noca funcionalidade, ja na abordagem de tópicos, nenhuma mudança é necessária na infraestrutura existente.
----
-#Fan-out
+
+## Conceitos Importantes
+
+- **Desacoplamento do tópico:** adicionar um novo elemento não afeta o processo, pois quem envia não precisa saber quem recebe.  
+- **Fila:** ao adicionar novas funcionalidades, pode exigir mudanças no sistema.  
+- **Tópicos:** permitem adicionar novas funcionalidades sem alterar a infraestrutura.  
+- **Fan-out:** uma mensagem enviada é **distribuída para vários consumidores ao mesmo tempo**, permitindo que diferentes sistemas recebam e processem em paralelo.  
