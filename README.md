@@ -158,4 +158,20 @@ Implementações: RabbitMQ, AWS SQS, Azure ServiceBus.
 - **Desacoplamento do tópico:** adicionar um novo elemento não afeta o processo, pois quem envia não precisa saber quem recebe.  
 - **Fila:** ao adicionar novas funcionalidades, pode exigir mudanças no sistema.  
 - **Tópicos:** permitem adicionar novas funcionalidades sem alterar a infraestrutura.  
-- **Fan-out:** uma mensagem enviada é **distribuída para vários consumidores ao mesmo tempo**, permitindo que diferentes sistemas recebam e processem em paralelo.  
+- **Fan-out:** uma mensagem enviada é **distribuída para vários consumidores ao mesmo tempo**, permitindo que diferentes sistemas recebam e processem em paralelo.
+
+## 2° Bimestre
+
+
+https://learn.microsoft.com/pt-br/azure/architecture/patterns/circuit-breaker?wt.mc_id=AZ-MVP-5003638
+
+Circuit Breaker
+
+  A ideia dele é protejer a relação com o sistema, das seguintes formas:
+  
+- (Close) Quando o circuito está correto, ele fica no estado fechado
+  
+- (Open) Quando ele falha ele fica em estado aberto
+  
+- (Half-Open) meio aberto ele tenta fazer a conexão e verifica se da certo, se estiver correto ele retorna para o fechado, caso esteja errado ele retorna para o estado aberto e é testado novamente
+  
