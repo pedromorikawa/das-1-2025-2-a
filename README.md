@@ -174,4 +174,21 @@ Circuit Breaker
 - (Open) Quando ele falha ele fica em estado aberto
   
 - (Half-Open) meio aberto ele tenta fazer a conexão e verifica se da certo, se estiver correto ele retorna para o fechado, caso esteja errado ele retorna para o estado aberto e é testado novamente
-  
+
+---
+## CQRS
+
+## Definições das características arquiteturais
+
+---
+##Retry Pattern
+
+
+- Retry after delay:
+
+- Grande bola de lama: É um código mal estruturado, como o sistema tem diversas coisas conectadas é dificil de mexer pois tem muitas coisas importantes no mesmo local
+
+- Arquitetura unitária
+
+- Desktop + servidor de banco de dados
+- 
