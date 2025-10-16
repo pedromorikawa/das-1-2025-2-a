@@ -176,19 +176,52 @@ Circuit Breaker
 - (Half-Open) meio aberto ele tenta fazer a conexão e verifica se da certo, se estiver correto ele retorna para o fechado, caso esteja errado ele retorna para o estado aberto e é testado novamente
 
 ---
-## CQRS
+## CQRS (Command Query Responsibility Segregation)
 
-## Definições das características arquiteturais
+É um padrão arquitetural que separa as operações de leitura (Query) das de escrita (Command).  
+Essa separação permite otimizar cada parte de forma independente — o modelo de leitura pode ser mais rápido, enquanto o de escrita garante as regras de negócio e a consistência dos dados.  
+
+Pode usar bancos de dados diferentes ou apenas separar a lógica internamente.  
+O principal desafio é a complexidade maior, pois pode haver um pequeno atraso entre o que foi gravado e o que aparece nas consultas.
 
 ---
-##Retry Pattern
 
+## Retry Pattern
 
-- Retry after delay:
+Padrão usado para **tratar falhas temporárias**, como erros em conexões de rede ou chamadas para serviços externos.  
+Ele tenta **executar novamente** a operação que falhou, após um tempo de espera definido (delay).  
 
-- Grande bola de lama: É um código mal estruturado, como o sistema tem diversas coisas conectadas é dificil de mexer pois tem muitas coisas importantes no mesmo local
+É importante definir:
+- Quantas tentativas serão feitas.  
+- O tempo de espera entre as tentativas.  
+- O que fazer se todas falharem (por exemplo, registrar o erro ou enviar um alerta).  
 
-- Arquitetura unitária
+Esse padrão ajuda a tornar o sistema mais **confiável e resiliente** a falhas momentâneas.
 
-- Desktop + servidor de banco de dados
-- 
+---
+
+## Grande Bola de Lama (Big Ball of Mud)
+
+É o nome dado a um sistema mal estruturado, onde tudo está muito conectado e sem organização clara.  
+O código costuma ter muitas dependências, responsabilidades misturadas e pouca separação de partes.  
+
+Esse tipo de arquitetura torna o sistema difícil de entender, modificar e evoluir, pois qualquer mudança pode causar problemas em outras partes.  
+Geralmente surge por falta de planejamento ou acúmulo de dívidas técnicas.
+
+---
+
+## Arquitetura Unitária
+
+É um tipo de arquitetura onde todo o sistema funciona como uma única unidade, com todos os componentes muito integrados.  
+Um exemplo é uma aplicação desktop que acessa diretamente um banco de dados central.  
+
+**Vantagens:**  
+- Estrutura simples e fácil de iniciar.  
+- Menor complexidade técnica.  
+
+**Desvantagens:**  
+- Dificulta o crescimento e a manutenção.  
+- Pouca flexibilidade e escalabilidade, já que todas as partes estão acopladas.  
+
+---
+
