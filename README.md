@@ -224,4 +224,13 @@ Um exemplo é uma aplicação desktop que acessa diretamente um banco de dados c
 - Pouca flexibilidade e escalabilidade, já que todas as partes estão acopladas.  
 
 ---
+## Estilo de arquitetura em camadas
+
+A arquitetura em camadas (ou **n-tier**) é um dos estilos mais comuns por ser simples, barata e fácil de entender. Ela organiza o sistema em camadas horizontais, cada uma com uma função específica como apresentação, negócio, persistência e banco de dados. Essa estrutura reflete a divisão natural das equipes de desenvolvimento e permite separar responsabilidades, o que facilita o entendimento e a manutenção inicial do sistema.
+
+Cada camada deve lidar apenas com sua parte da lógica, o que garante a chamada separação de preocupações. Quando as camadas são fechadas, a comunicação precisa passar de uma para outra de forma ordenada, mantendo o isolamento e evitando dependências diretas. Já as camadas abertas permitem pular níveis, o que dá mais flexibilidade, mas aumenta o acoplamento entre partes do sistema.
+
+Esse estilo é muito usado em aplicações pequenas e médias, especialmente quando ainda não se sabe qual arquitetura será adotada no futuro. No entanto, conforme o sistema cresce, surgem desvantagens como baixa agilidade, dificuldade de manutenção e testes, além de problemas de desempenho e escalabilidade por causa da estrutura monolítica. Um problema comum é o antipadrão sinkhole, quando as camadas apenas repassam dados sem realizar processamento real, tornando o sistema ineficiente.
+
+Apesar dessas limitações, a arquitetura em camadas continua sendo uma boa escolha inicial para projetos simples, com prazos e recursos limitados. Suas principais forças estão na simplicidade e no baixo custo, mas ela perde eficiência em sistemas grandes ou que precisam de alta modularidade e escalabilidade.
 
