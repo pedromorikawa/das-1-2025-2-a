@@ -10,13 +10,13 @@
     <name>Multi Project: DAS-1-2025-2-A</name>
 
     <modules>
-        <module>Solid</module>
+       <!--<module>Solid</module>
         <module>designpattern</module>
         <module>eventos</module>
         <module>pipeline</module>
         <module>microkernel-interface</module>
         <module>microkernel-kernel</module>
-        <module>microkernel-plugin</module>
+        <module>microkernel-plugin</module>-->
         <module>app-a</module>
         <module>app-b</module>
 
