@@ -233,3 +233,9 @@ Cada camada deve lidar apenas com sua parte da lógica, o que garante a chamada 
 Esse estilo é muito usado em aplicações pequenas e médias, especialmente quando ainda não se sabe qual arquitetura será adotada no futuro. No entanto, conforme o sistema cresce, surgem desvantagens como baixa agilidade, dificuldade de manutenção e testes, além de problemas de desempenho e escalabilidade por causa da estrutura monolítica. Um problema comum é o antipadrão sinkhole, quando as camadas apenas repassam dados sem realizar processamento real, tornando o sistema ineficiente.
 
 Apesar dessas limitações, a arquitetura em camadas continua sendo uma boa escolha inicial para projetos simples, com prazos e recursos limitados. Suas principais forças estão na simplicidade e no baixo custo, mas ela perde eficiência em sistemas grandes ou que precisam de alta modularidade e escalabilidade.
+
+## Estilo de arquitetura em Pipeline
+
+## Estilo de arquitetura Microkernel
+
+## Estilo de arquitetura Microsserviços
